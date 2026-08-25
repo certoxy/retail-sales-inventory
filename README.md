@@ -11,6 +11,8 @@ A browser-based retail point-of-sale and inventory application built with React/
 - Atomic sale completion and stock deduction
 - Product and category creation
 - Stock receiving and positive/negative adjustments
+- Administrator and cashier roles
+- Staff activation and role management
 - Protection against negative inventory
 - Low-stock indicators and inventory summaries
 - Sales, sale-item, and stock-movement history
@@ -75,4 +77,4 @@ All application tables use Row-Level Security. Database access is limited to aut
 
 ## Status
 
-This is an early working MVP. It still needs formal role management, reporting, customer management, purchasing, offline support and automated tests before production retail use.
+This is an early working MVP. It still needs reporting, customer management, purchasing, offline support and automated tests before production retail use.

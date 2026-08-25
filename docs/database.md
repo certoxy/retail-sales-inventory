@@ -10,6 +10,7 @@
 | `sales` | Transaction header, total, payment method and cashier |
 | `sale_items` | Products and quantities included in each sale |
 | `stock_movements` | Immutable inventory audit events |
+| `profiles` | Staff identity, role and active status |
 
 ## Relationships
 
@@ -33,6 +34,8 @@ erDiagram
 ## Security
 
 Row-Level Security is enabled for each application table. Current policies allow authenticated staff to manage products, categories and customers and read transaction history. Inserts into sales and inventory history are controlled through authenticated database functions.
+
+Administrators can manage products, inventory and staff access. Cashiers can complete sales but cannot change stock or roles. New Supabase users receive the cashier role automatically.
 
 ## Migration policy
 

@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.4.0] - 2026-08-25
+
+### Added
+
+- Administrator and cashier roles
+- Automatic cashier profile creation for new users
+- Staff role and activation management
+- Role-aware navigation
+- Administrator-only inventory functions and policies
+
 ## [0.3.0] - 2026-08-25
 
 ### Added
