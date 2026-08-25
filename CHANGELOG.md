@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1] - 2026-08-25
+
+### Fixed
+
+- Multi-branch migration now drops and recreates the inventory movement view when adding branch columns
+- Migration is wrapped in an explicit transaction to prevent partial schema changes
+
 ## [0.7.0] - 2026-08-25
 
 ### Added

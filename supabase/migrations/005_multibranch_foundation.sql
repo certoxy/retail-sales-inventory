@@ -1,6 +1,8 @@
 -- Phase 5: Multi-branch foundation with branch-specific prices and inventory.
 -- Run once after 004_barcode_generation.sql.
 
+begin;
+
 create table public.branches (
   id uuid primary key default gen_random_uuid(),
   code text not null unique,
@@ -88,7 +90,8 @@ create policy "staff read branch sale items" on public.sale_items for select to 
 create policy "admins read branch movements" on public.stock_movements for select to authenticated
   using(public.is_admin() and public.can_access_branch(branch_id));
 
-create or replace view public.inventory_movement_history
+drop view if exists public.inventory_movement_history;
+create view public.inventory_movement_history
 with(security_invoker=true) as
 select sm.id,sm.created_at,sm.branch_id,b.name as branch_name,sm.product_id,
        p.sku,p.name as product_name,sm.movement_type,sm.quantity_change,
@@ -151,3 +154,5 @@ end $$;
 grant execute on function public.complete_branch_sale(uuid,jsonb,text,uuid) to authenticated;
 grant execute on function public.change_branch_stock(uuid,uuid,numeric,text,text) to authenticated;
 grant select on public.branches,public.staff_branch_assignments,public.branch_products to authenticated;
+
+commit;
