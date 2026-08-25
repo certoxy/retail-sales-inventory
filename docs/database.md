@@ -11,6 +11,9 @@
 | `sale_items` | Products and quantities included in each sale |
 | `stock_movements` | Immutable inventory audit events |
 | `profiles` | Staff identity, role and active status |
+| `branches` | Store locations |
+| `staff_branch_assignments` | Staff-to-branch access |
+| `branch_products` | Branch-specific price, quantity, reorder level and status |
 
 ## Relationships
 
@@ -30,6 +33,8 @@ erDiagram
 - `complete_sale` locks products, validates stock and writes all sale records atomically.
 - Manual changes use `change_stock`; users should not directly overwrite stock.
 - Stock cannot become negative.
+- Sales and stock movements always identify the responsible branch.
+- A product can have different selling prices and inventory balances by branch.
 
 ## Security
 

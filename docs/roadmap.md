@@ -15,10 +15,13 @@
 - Reorder-level and product-margin monitoring
 - Automatic internal barcode generation
 - Individual and batch barcode-label printing
+- Multi-branch foundation
+- Branch-specific pricing and inventory
+- Multi-branch cashier assignments
 
 ## Recommended next milestones
 
-1. Customer management
+1. Confirmed branch-to-branch stock transfers
 2. Suppliers and purchase orders
 3. Sales dashboard and reporting
 4. Receipt printing

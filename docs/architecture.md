@@ -15,19 +15,21 @@ flowchart LR
 
 The client-rendered React application is hosted through OpenAI Sites. Supabase provides authentication, PostgreSQL storage, Row-Level Security and transactional functions.
 
+Each product has a global catalogue record and one `branch_products` record per location. The branch record owns its selling price, available quantity, reorder level and sale availability.
+
 ## Checkout flow
 
 1. The cashier signs in through Supabase Authentication.
 2. The application retrieves active products permitted by RLS.
 3. The cashier builds a cart locally.
-4. `complete_sale` validates inventory and creates the sale and sale items.
+4. `complete_branch_sale` validates the selected branch inventory and pricing.
 5. The same transaction deducts inventory and records stock movements.
 6. If any item has insufficient stock, the complete transaction rolls back.
 
 ## Inventory adjustment flow
 
 1. An authenticated user selects a product and movement type.
-2. The application calls `change_stock`.
+2. The application calls `change_branch_stock`.
 3. The function prevents negative inventory.
 4. The product balance and movement audit record are committed together.
 

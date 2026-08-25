@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.7.0] - 2026-08-25
+
+### Added
+
+- Branch records and branch selector
+- Branch-specific product prices, inventory and reorder levels
+- Branch-aware checkout and stock adjustments
+- Multi-branch cashier assignments
+- Main Branch migration for existing inventory and transactions
+
+### Security
+
+- Branch-aware Row-Level Security and transactional functions
+
 ## [0.6.0] - 2026-08-25
 
 ### Added
