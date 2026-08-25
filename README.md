@@ -17,6 +17,7 @@ A browser-based retail point-of-sale and inventory application built with React/
 - Staff activation and role management
 - Multiple branches with branch-specific pricing and inventory
 - Multi-branch staff assignments and branch-aware checkout
+- Confirmed multi-item stock transfers between branches
 - Protection against negative inventory
 - Low-stock indicators and inventory summaries
 - Cost, markup and potential-margin visibility for administrators
@@ -62,6 +63,7 @@ Run the SQL files in Supabase SQL Editor in numeric order:
 3. `supabase/migrations/003_staff_roles.sql`
 4. `supabase/migrations/004_barcode_generation.sql`
 5. `supabase/migrations/005_multibranch_foundation.sql`
+6. `supabase/migrations/006_stock_transfers.sql`
 
 Then create at least one user under **Supabase → Authentication → Users**.
 

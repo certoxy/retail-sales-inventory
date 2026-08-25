@@ -18,16 +18,16 @@
 - Multi-branch foundation
 - Branch-specific pricing and inventory
 - Multi-branch cashier assignments
+- Confirmed branch-to-branch stock transfers
 
 ## Recommended next milestones
 
-1. Confirmed branch-to-branch stock transfers
-2. Suppliers and purchase orders
-3. Sales dashboard and reporting
-4. Receipt printing
-5. Returns and refunds
-6. Offline-first transaction queue and synchronization
-7. Automated tests
+1. Suppliers and purchase orders
+2. Sales dashboard and reporting
+3. Receipt printing
+4. Returns and refunds
+5. Offline-first transaction queue and synchronization
+6. Automated tests
 
 ## Production-readiness items
 

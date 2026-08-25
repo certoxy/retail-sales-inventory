@@ -14,6 +14,8 @@
 | `branches` | Store locations |
 | `staff_branch_assignments` | Staff-to-branch access |
 | `branch_products` | Branch-specific price, quantity, reorder level and status |
+| `stock_transfers` | Transfer header, route, status and send/receipt audit data |
+| `stock_transfer_items` | Products and quantities included in a transfer |
 
 ## Relationships
 
@@ -35,6 +37,7 @@ erDiagram
 - Stock cannot become negative.
 - Sales and stock movements always identify the responsible branch.
 - A product can have different selling prices and inventory balances by branch.
+- Sending a transfer deducts source stock; destination stock increases only through `receive_stock_transfer`.
 
 ## Security
 

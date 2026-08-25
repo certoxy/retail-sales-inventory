@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.8.0] - 2026-08-25
+
+### Added
+
+- Multi-product branch-to-branch stock transfers
+- In-transit and received transfer states
+- Destination receipt confirmation before inventory increases
+- Transfer-out and transfer-in inventory audit movements
+- Transfer history with route, item and status details
+
 ## [0.7.1] - 2026-08-25
 
 ### Fixed

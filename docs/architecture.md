@@ -33,6 +33,14 @@ Each product has a global catalogue record and one `branch_products` record per 
 3. The function prevents negative inventory.
 4. The product balance and movement audit record are committed together.
 
+## Stock transfer flow
+
+1. An administrator selects a destination and one or more products.
+2. `send_stock_transfer` validates availability and deducts source inventory atomically.
+3. The transfer remains `in_transit`; destination inventory is unchanged.
+4. At the receiving branch, an administrator confirms receipt.
+5. `receive_stock_transfer` increases destination inventory and records transfer-in movements.
+
 ## Source layout
 
 - `app/`: interface and styling
@@ -43,8 +51,6 @@ Each product has a global catalogue record and one `branch_products` record per 
 
 ## Current limitations
 
-- All authenticated users currently have the same database permissions.
-- Product editing and deactivation are not yet exposed.
-- Inventory value currently uses selling price, not acquisition cost.
+- Transfer discrepancies, partial receipts and cancellations are not yet supported.
 - The application requires internet connectivity.
 - There is no automated end-to-end test suite yet.
