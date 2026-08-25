@@ -13,6 +13,8 @@
 - Staff access management
 - Product editing, activation and barcode support
 - Reorder-level and product-margin monitoring
+- Automatic internal barcode generation
+- Individual and batch barcode-label printing
 
 ## Recommended next milestones
 

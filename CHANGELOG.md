@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.6.0] - 2026-08-25
+
+### Added
+
+- Duplicate-safe internal Code 128 barcode generation
+- Live barcode preview
+- Individual and batch product label selection
+- Print-ready labels with product name, price, barcode and SKU
+- Barcode generator database migration
+
 ## [0.5.0] - 2026-08-25
 
 ### Added

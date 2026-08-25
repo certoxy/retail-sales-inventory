@@ -11,6 +11,7 @@ A browser-based retail point-of-sale and inventory application built with React/
 - Atomic sale completion and stock deduction
 - Product and category creation
 - Product editing, activation and barcode support
+- Automatic Code 128 barcode generation and printable labels
 - Stock receiving and positive/negative adjustments
 - Administrator and cashier roles
 - Staff activation and role management
@@ -56,6 +57,8 @@ Run the SQL files in Supabase SQL Editor in numeric order:
 
 1. `supabase/migrations/001_initial_retail_schema.sql`
 2. `supabase/migrations/002_inventory_management.sql`
+3. `supabase/migrations/003_staff_roles.sql`
+4. `supabase/migrations/004_barcode_generation.sql`
 
 Then create at least one user under **Supabase → Authentication → Users**.
 
