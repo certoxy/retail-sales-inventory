@@ -1,0 +1,39 @@
+# Database
+
+## Core tables
+
+| Table | Purpose |
+| --- | --- |
+| `categories` | Product grouping |
+| `products` | SKU, price, cost, stock balance and reorder level |
+| `customers` | Optional customer details |
+| `sales` | Transaction header, total, payment method and cashier |
+| `sale_items` | Products and quantities included in each sale |
+| `stock_movements` | Immutable inventory audit events |
+
+## Relationships
+
+```mermaid
+erDiagram
+    CATEGORIES ||--o{ PRODUCTS : groups
+    CUSTOMERS ||--o{ SALES : places
+    SALES ||--|{ SALE_ITEMS : contains
+    PRODUCTS ||--o{ SALE_ITEMS : sold_as
+    PRODUCTS ||--o{ STOCK_MOVEMENTS : tracks
+```
+
+## Inventory rules
+
+- `products.quantity_on_hand` stores the current balance for fast checkout.
+- Every sale or manual change also creates a `stock_movements` record.
+- `complete_sale` locks products, validates stock and writes all sale records atomically.
+- Manual changes use `change_stock`; users should not directly overwrite stock.
+- Stock cannot become negative.
+
+## Security
+
+Row-Level Security is enabled for each application table. Current policies allow authenticated staff to manage products, categories and customers and read transaction history. Inserts into sales and inventory history are controlled through authenticated database functions.
+
+## Migration policy
+
+Migrations are immutable after use in a shared environment. Future database changes must be added as a new numbered SQL file rather than modifying an applied migration.
