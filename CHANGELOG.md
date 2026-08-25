@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.5.0] - 2026-08-25
+
+### Added
+
+- Product editing
+- Product activation and deactivation
+- Barcode capture and checkout search
+- Product-specific reorder-level alerts
+- Cost, markup and potential-margin reporting
+
+### Changed
+
+- Inactive products remain in the administrator catalogue but are excluded from checkout
+
 ## [0.4.0] - 2026-08-25
 
 ### Added

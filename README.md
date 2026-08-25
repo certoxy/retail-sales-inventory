@@ -10,11 +10,13 @@ A browser-based retail point-of-sale and inventory application built with React/
 - VAT-inclusive transaction totals
 - Atomic sale completion and stock deduction
 - Product and category creation
+- Product editing, activation and barcode support
 - Stock receiving and positive/negative adjustments
 - Administrator and cashier roles
 - Staff activation and role management
 - Protection against negative inventory
 - Low-stock indicators and inventory summaries
+- Cost, markup and potential-margin visibility for administrators
 - Sales, sale-item, and stock-movement history
 - Responsive desktop and mobile interface
 

@@ -11,17 +11,18 @@
 - Inventory movement history
 - Admin and cashier roles
 - Staff access management
+- Product editing, activation and barcode support
+- Reorder-level and product-margin monitoring
 
 ## Recommended next milestones
 
-1. Product editing, deactivation and barcode support
-2. Customer management
-3. Suppliers and purchase orders
-4. Sales dashboard and reporting
-5. Receipt printing
-6. Returns and refunds
-7. Offline-first transaction queue and synchronization
-8. Automated tests
+1. Customer management
+2. Suppliers and purchase orders
+3. Sales dashboard and reporting
+4. Receipt printing
+5. Returns and refunds
+6. Offline-first transaction queue and synchronization
+7. Automated tests
 
 ## Production-readiness items
 
