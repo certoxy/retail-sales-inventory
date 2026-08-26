@@ -110,6 +110,15 @@ Each product has a global catalogue record and one `branch_products` record per 
 5. Permission-aware summaries group approved costs by category and payment method.
 6. The dashboard estimates operating result as gross profit minus approved expenses.
 
+## Inventory disposal flow
+
+1. Assigned branch staff submit a product quantity, reason, notes and optional evidence reference.
+2. A specific inventory lot can be selected; otherwise the approval process consumes available lots using FEFO.
+3. Pending requests do not change sellable inventory.
+4. An administrator validates the request and approves or rejects it.
+5. Approval atomically deducts the branch balance, reconciles lot quantities and creates an immutable `disposal` stock movement.
+6. Permission-aware summaries report disposed units and estimated cost loss by reason.
+
 ## Source layout
 
 - `app/`: interface and styling

@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.7.0] - 2026-08-26
+
+### Added
+
+- Branch inventory disposal requests for expired, damaged, spoiled, missing, recalled and store-use stock
+- Optional lot and expiry selection with automatic FEFO fallback
+- Administrator approval and rejection before sellable inventory changes
+- Atomic branch-stock, inventory-lot and stock-movement write-off posting
+- Estimated loss values, reason breakdowns, audit history and CSV export
+
 ## [1.6.0] - 2026-08-26
 
 ### Added

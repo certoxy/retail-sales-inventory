@@ -30,6 +30,8 @@
 | `product_suppliers` | Preferred supplier, supplier cost and lead time per product |
 | `expense_categories` | Standard operating-cost classifications |
 | `expenses` | Branch cost, payment, approval and linked cash-movement audit |
+| `inventory_disposals` | Branch write-off request, reason, status and approval audit |
+| `inventory_disposal_items` | Product, lot, quantity and estimated cost for each write-off |
 
 ## Relationships
 
@@ -70,6 +72,8 @@ erDiagram
 - Cash expenses require an open cashier shift and immediately create a linked cash-out movement.
 - Administrator-entered expenses are approved immediately; cashier expenses require review.
 - Rejected cash expenses are reversed only while the linked shift remains open.
+- Disposal requests do not affect sellable stock until an administrator approves them.
+- Approved disposals deduct branch inventory and the selected lot, or consume available lots using FEFO.
 
 ## Security
 

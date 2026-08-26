@@ -33,12 +33,13 @@
 - Critical-stock pop-up notifications
 - Branch expense tracking, approvals and cashier-shift integration
 - Expense breakdowns, CSV export and dashboard operating-result estimates
+- Damaged, expired and lost inventory disposal with administrator approval
+- Lot-aware write-offs, loss summaries and CSV export
 
 ## Recommended next milestones
 
-1. Damaged and expired stock disposal
-2. Offline-first transaction queue and synchronization
-3. Automated tests
+1. Offline-first transaction queue and synchronization
+2. Automated tests
 
 ## Production-readiness items
 
