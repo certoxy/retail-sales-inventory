@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.3.0] - 2026-08-26
+
+### Added
+
+- Cashier shift opening with a counted starting float
+- Required active shift before checkout
+- Cash-in and cash-out drawer movements with reasons
+- Cash, card and GCash shift totals with cash-refund tracking
+- Expected-versus-counted closing reconciliation and over/short reasons
+- Administrator review and printable shift summaries
+
 ## [1.2.0] - 2026-08-26
 
 ### Added

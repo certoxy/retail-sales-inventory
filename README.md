@@ -27,6 +27,8 @@ A browser-based retail point-of-sale and inventory application built with React/
 - Thermal-printer layouts for 58 mm and 80 mm paper
 - Partial returns, refund/exchange requests and administrator approval
 - Sellable, damaged and expired return dispositions with audit receipts
+- Cashier shifts with opening float, drawer movements and closing reconciliation
+- Payment-method totals, cash over/short reporting and administrator shift review
 - Protection against negative inventory
 - Low-stock indicators and inventory summaries
 - Cost, markup and potential-margin visibility for administrators
@@ -77,6 +79,7 @@ Run the SQL files in Supabase SQL Editor in numeric order:
 8. `supabase/migrations/008_sales_dashboard.sql`
 9. `supabase/migrations/009_receipt_printing.sql`
 10. `supabase/migrations/010_returns_refunds.sql`
+11. `supabase/migrations/011_cashier_shifts.sql`
 
 Then create at least one user under **Supabase → Authentication → Users**.
 
@@ -100,4 +103,4 @@ All application tables use Row-Level Security. Database access is limited to aut
 
 ## Status
 
-This is an early working MVP. It still needs reporting, customer management, purchasing, offline support and automated tests before production retail use.
+This is an early working MVP. Stocktake, reorder automation, expense tracking, offline support and automated tests remain before production retail use.

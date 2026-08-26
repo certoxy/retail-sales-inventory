@@ -74,6 +74,15 @@ Each product has a global catalogue record and one `branch_products` record per 
 5. Approved sellable returns increase branch inventory; damaged and expired items remain unavailable.
 6. The return record and printable receipt preserve the complete decision trail.
 
+## Cashier shift flow
+
+1. A cashier opens one shift at an assigned branch and enters the counted starting float.
+2. Checkout requires that open shift and links every sale to it.
+3. Cash additions and payouts are recorded with an amount and reason.
+4. The summary separates cash, card and GCash sales and deducts approved cash refunds.
+5. The cashier enters the physical closing count; PostgreSQL calculates the over or short amount atomically.
+6. Administrators review closed shifts, add review notes and can print the reconciliation summary.
+
 ## Source layout
 
 - `app/`: interface and styling

@@ -27,15 +27,15 @@
 - Permission-aware CSV sales export
 - Thermal receipt printing and secure receipt reprinting
 - Partial returns, refund/exchange approval and return receipts
+- Cash register shifts, drawer movements and closing reconciliation
 
 ## Recommended next milestones
 
-1. Cash register shifts and reconciliation
-2. Stocktake and physical inventory counting
-3. Automated reorder suggestions
-4. Expense tracking
-5. Offline-first transaction queue and synchronization
-6. Automated tests
+1. Stocktake and physical inventory counting
+2. Automated reorder suggestions
+3. Expense tracking
+4. Offline-first transaction queue and synchronization
+5. Automated tests
 
 ## Production-readiness items
 

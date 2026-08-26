@@ -23,6 +23,8 @@
 | `stock_transfer_item_lots` | Expiry lots carried between branches during transfers |
 | `returns` | Return request, outcome, approval, refund and audit header |
 | `return_items` | Original sale items, returned quantities and disposition |
+| `cash_shifts` | Per-cashier drawer opening, closing, difference and review audit |
+| `cash_movements` | Reasoned cash additions and removals during a shift |
 
 ## Relationships
 
@@ -51,6 +53,9 @@ erDiagram
 - `get_sale_receipt` returns a complete receipt only to administrators or the cashier who completed the sale.
 - Return functions prevent cumulative approved or pending quantities from exceeding the original sale.
 - Only approved `restock` items increase sellable branch inventory.
+- Checkout requires an open cashier shift and links each sale to that shift.
+- Expected cash equals opening cash plus cash sales, minus cash refunds, plus cash-in, minus cash-out.
+- Closing and administrator review are recorded through transactional functions.
 
 ## Security
 
