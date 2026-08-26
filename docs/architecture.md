@@ -119,6 +119,15 @@ Each product has a global catalogue record and one `branch_products` record per 
 5. Approval atomically deducts the branch balance, reconciles lot quantities and creates an immutable `disposal` stock movement.
 6. Permission-aware summaries report disposed units and estimated cost loss by reason.
 
+## Offline sale flow
+
+1. Successful online loads cache the assigned branches, staff profile, active shift and branch catalogue on the device.
+2. During an outage, only cash sales from a previously opened shift can be queued.
+3. A safety reserve based on the product reorder level prevents offline sales from consuming critically low stock.
+4. Each queued transaction receives a device-generated UUID and remains visible as pending, syncing, failed or synced.
+5. Reconnection triggers `sync_offline_sale`, which revalidates shift timing and current server inventory inside one transaction.
+6. A unique offline transaction ID prevents duplicate posting; stock conflicts remain in the queue for review and retry.
+
 ## Source layout
 
 - `app/`: interface and styling

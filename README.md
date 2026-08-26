@@ -36,6 +36,8 @@ A browser-based retail point-of-sale and inventory application built with React/
 - Dashboard operating-result estimates after approved expenses
 - Damaged, expired, spoiled, missing, recalled and store-use inventory write-offs
 - Lot-aware disposal approval, automatic stock deduction and loss reporting
+- Offline cash-sale queue with cached branch catalogue and automatic synchronization
+- Installable PWA shell, connection status and duplicate-safe offline transaction IDs
 - Protection against negative inventory
 - Low-stock indicators and inventory summaries
 - Cost, markup and potential-margin visibility for administrators
@@ -91,6 +93,7 @@ Run the SQL files in Supabase SQL Editor in numeric order:
 13. `supabase/migrations/013_reorder_suggestions.sql`
 14. `supabase/migrations/014_branch_expenses.sql`
 15. `supabase/migrations/015_inventory_disposals.sql`
+16. `supabase/migrations/016_offline_sales.sql`
 
 Then create at least one user under **Supabase → Authentication → Users**.
 
@@ -114,4 +117,4 @@ All application tables use Row-Level Security. Database access is limited to aut
 
 ## Status
 
-Version 1.7 includes the complete branch disposal and write-off workflow. Offline support and automated tests remain before production retail use.
+Version 1.8 includes guarded offline cash sales and automatic synchronization. Automated tests and broader production hardening remain before production retail use.

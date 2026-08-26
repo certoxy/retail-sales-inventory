@@ -74,6 +74,8 @@ erDiagram
 - Rejected cash expenses are reversed only while the linked shift remains open.
 - Disposal requests do not affect sellable stock until an administrator approves them.
 - Approved disposals deduct branch inventory and the selected lot, or consume available lots using FEFO.
+- Offline transactions carry a device-generated UUID; a unique database index prevents duplicate synchronization.
+- `sync_offline_sale` validates branch access, cashier shift timing and current stock before atomically posting a queued sale.
 
 ## Security
 

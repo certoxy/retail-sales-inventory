@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.8.0] - 2026-08-26
+
+### Added
+
+- Online/offline connection indicator and cashier-accessible transaction queue
+- Device-cached branch, staff, active-shift and product catalogue data
+- Offline cash sales during an existing open cashier shift
+- Safety-stock protection based on branch reorder levels
+- Automatic synchronization, manual retry and failed-transaction visibility
+- Idempotent offline transaction identifiers to prevent duplicate sales
+- Stock-conflict reporting instead of silent inventory changes
+- Installable PWA manifest and offline application shell
+
 ## [1.7.1] - 2026-08-26
 
 ### Fixed

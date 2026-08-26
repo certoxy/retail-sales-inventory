@@ -35,11 +35,14 @@
 - Expense breakdowns, CSV export and dashboard operating-result estimates
 - Damaged, expired and lost inventory disposal with administrator approval
 - Lot-aware write-offs, loss summaries and CSV export
+- Offline cash-sale queue, cached catalogue and automatic synchronization
+- Duplicate-safe transaction IDs, safety-stock controls and conflict reporting
+- Installable PWA application shell
 
 ## Recommended next milestones
 
-1. Offline-first transaction queue and synchronization
-2. Automated tests
+1. Automated tests
+2. Production monitoring and backup drills
 
 ## Production-readiness items
 
