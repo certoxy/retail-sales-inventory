@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0] - 2026-08-26
+
+### Added
+
+- Branch-based physical stocktake sessions
+- System-quantity snapshots for all active branch products
+- Search and barcode-assisted count sheet with per-item notes
+- Live count progress and quantity variances
+- Submit, administrator posting and cancellation workflow
+- Atomic inventory reconciliation with stock-movement and lot audit updates
+- Permanent posted and cancelled stocktake history
+
 ## [1.3.0] - 2026-08-26
 
 ### Added

@@ -29,6 +29,7 @@ A browser-based retail point-of-sale and inventory application built with React/
 - Sellable, damaged and expired return dispositions with audit receipts
 - Cashier shifts with opening float, drawer movements and closing reconciliation
 - Payment-method totals, cash over/short reporting and administrator shift review
+- Branch stocktakes with physical counts, variance review and controlled posting
 - Protection against negative inventory
 - Low-stock indicators and inventory summaries
 - Cost, markup and potential-margin visibility for administrators
@@ -80,6 +81,7 @@ Run the SQL files in Supabase SQL Editor in numeric order:
 9. `supabase/migrations/009_receipt_printing.sql`
 10. `supabase/migrations/010_returns_refunds.sql`
 11. `supabase/migrations/011_cashier_shifts.sql`
+12. `supabase/migrations/012_stocktake_physical_count.sql`
 
 Then create at least one user under **Supabase → Authentication → Users**.
 
@@ -103,4 +105,4 @@ All application tables use Row-Level Security. Database access is limited to aut
 
 ## Status
 
-This is an early working MVP. Stocktake, reorder automation, expense tracking, offline support and automated tests remain before production retail use.
+This is an early working MVP. Reorder automation, expense tracking, offline support and automated tests remain before production retail use.

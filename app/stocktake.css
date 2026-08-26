@@ -1,0 +1,55 @@
+.app-shell > .stocktake-workspace {
+  position: fixed;
+  z-index: 10;
+  inset: 0 0 0 232px;
+  overflow: auto;
+  background: var(--paper);
+}
+
+.stocktake-banner {
+  display: grid;
+  grid-template-columns: 1fr 180px auto;
+  align-items: center;
+  gap: 24px;
+  padding: 20px;
+  border-radius: 14px;
+  background: linear-gradient(120deg, #173c2c, #28684c);
+  color: #fff;
+}
+
+.stocktake-banner h2 { margin-top: 7px; }
+.stocktake-banner p { margin: 4px 0 0; color: #c6dbd1; font-size: 9px; }
+.stocktake-progress strong, .stocktake-progress span { display: block; }
+.stocktake-progress strong { font: 600 22px Georgia, serif; }
+.stocktake-progress span { margin: 3px 0 8px; color: #c6dbd1; font-size: 8px; }
+.stocktake-progress i { display: block; height: 5px; overflow: hidden; border-radius: 5px; background: #ffffff25; }
+.stocktake-progress b { display: block; height: 100%; border-radius: inherit; background: #8fe0ae; }
+.stocktake-stats { grid-template-columns: repeat(4, 1fr); }
+
+.stocktake-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.stocktake-status.counting { background: #e7efff; color: #3b5f9c; }
+.stocktake-status.submitted { background: #fff2d9; color: #946519; }
+.stocktake-status.posted { background: #eaf5ee; color: #397956; }
+.stocktake-status.cancelled { background: #fee7e5; color: #a33b35; }
+.stocktake-banner .stocktake-status { background: #8fe0ae; color: #173c2c; }
+.count-input { width: 95px; font-weight: 800; }
+.stocktake-warning { display: grid; gap: 3px; margin-top: 14px; padding: 11px; border-radius: 9px; background: #fff5df; color: #805b1f; font-size: 9px; }
+.stocktake-warning span { color: #977543; }
+
+@media (max-width: 900px) {
+  .stocktake-banner { grid-template-columns: 1fr 150px; }
+  .stocktake-banner .active-shift-actions { grid-column: 1 / -1; }
+  .stocktake-stats { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 760px) { .app-shell > .stocktake-workspace { left: 68px; } }
+@media (max-width: 560px) { .stocktake-banner { grid-template-columns: 1fr; } .stocktake-stats { grid-template-columns: 1fr; } }
+@media (max-width: 500px) { .app-shell > .stocktake-workspace { left: 0; top: 72px; } }

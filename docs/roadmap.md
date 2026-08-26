@@ -28,14 +28,14 @@
 - Thermal receipt printing and secure receipt reprinting
 - Partial returns, refund/exchange approval and return receipts
 - Cash register shifts, drawer movements and closing reconciliation
+- Stocktake sessions, physical inventory counting and variance posting
 
 ## Recommended next milestones
 
-1. Stocktake and physical inventory counting
-2. Automated reorder suggestions
-3. Expense tracking
-4. Offline-first transaction queue and synchronization
-5. Automated tests
+1. Automated reorder suggestions
+2. Expense tracking
+3. Offline-first transaction queue and synchronization
+4. Automated tests
 
 ## Production-readiness items
 

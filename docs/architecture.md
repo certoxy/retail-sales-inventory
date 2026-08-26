@@ -83,6 +83,15 @@ Each product has a global catalogue record and one `branch_products` record per 
 5. The cashier enters the physical closing count; PostgreSQL calculates the over or short amount atomically.
 6. Administrators review closed shifts, add review notes and can print the reconciliation summary.
 
+## Stocktake flow
+
+1. An administrator starts a branch stocktake, capturing system quantities for all active products.
+2. Assigned branch staff search or scan products and save physical counts with optional notes.
+3. All products must be counted before the session can be submitted and locked.
+4. An administrator reviews the variances and either cancels or posts the session.
+5. Posting atomically replaces branch balances, records variance movements and reconciles available inventory lots.
+6. Posted and cancelled sessions remain in the branch audit history.
+
 ## Source layout
 
 - `app/`: interface and styling

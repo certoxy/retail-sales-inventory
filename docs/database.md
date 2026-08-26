@@ -25,6 +25,8 @@
 | `return_items` | Original sale items, returned quantities and disposition |
 | `cash_shifts` | Per-cashier drawer opening, closing, difference and review audit |
 | `cash_movements` | Reasoned cash additions and removals during a shift |
+| `stocktakes` | Branch count-session status, ownership and posting audit |
+| `stocktake_items` | Expected, physically counted and variance quantity per product |
 
 ## Relationships
 
@@ -56,6 +58,9 @@ erDiagram
 - Checkout requires an open cashier shift and links each sale to that shift.
 - Expected cash equals opening cash plus cash sales, minus cash refunds, plus cash-in, minus cash-out.
 - Closing and administrator review are recorded through transactional functions.
+- Starting a stocktake snapshots every active branch product and permits only one active session per branch.
+- Posting replaces branch balances with approved physical counts and records each non-zero variance as a `stocktake` movement.
+- Positive variances create an untracked inventory lot; negative variances reduce available lots using FEFO.
 
 ## Security
 
