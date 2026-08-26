@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.9.0] - 2026-08-26
+
+### Added
+
+- Supplier records with contact details
+- Branch-specific purchase orders and multiple order lines
+- Full and partial delivery receiving
+- Automatic stock and latest-cost updates from received deliveries
+- Optional lot numbers and expiration dates
+- Expired and 30-day expiry monitoring
+- FEFO lot reduction during sales and lot preservation during stock transfers
+
 ## [0.8.0] - 2026-08-25
 
 ### Added

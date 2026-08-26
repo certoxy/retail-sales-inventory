@@ -41,6 +41,15 @@ Each product has a global catalogue record and one `branch_products` record per 
 4. At the receiving branch, an administrator confirms receipt.
 5. `receive_stock_transfer` increases destination inventory and records transfer-in movements.
 
+## Purchasing and expiry flow
+
+1. An administrator creates a supplier and a branch purchase order.
+2. Each delivery records only the quantities received; partial orders stay open.
+3. Receiving updates branch inventory and the product's latest unit cost atomically.
+4. Lot number and expiry date are optional for each received line.
+5. Checkout reduces tracked lots using first-expiry-first-out (FEFO).
+6. Stock transfers preserve tracked lot and expiry details between branches.
+
 ## Source layout
 
 - `app/`: interface and styling
@@ -51,6 +60,6 @@ Each product has a global catalogue record and one `branch_products` record per 
 
 ## Current limitations
 
-- Transfer discrepancies, partial receipts and cancellations are not yet supported.
+- Transfer discrepancies and cancellations are not yet supported.
 - The application requires internet connectivity.
 - There is no automated end-to-end test suite yet.

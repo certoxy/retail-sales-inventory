@@ -19,13 +19,16 @@
 - Branch-specific pricing and inventory
 - Multi-branch cashier assignments
 - Confirmed branch-to-branch stock transfers
+- Suppliers and purchase orders
+- Partial delivery receiving
+- Optional expiry and lot inventory
 
 ## Recommended next milestones
 
-1. Suppliers and purchase orders
-2. Sales dashboard and reporting
-3. Receipt printing
-4. Returns and refunds
+1. Sales dashboard and reporting
+2. Receipt printing
+3. Returns and refunds
+4. Cash register shifts and reconciliation
 5. Offline-first transaction queue and synchronization
 6. Automated tests
 

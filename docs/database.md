@@ -16,6 +16,11 @@
 | `branch_products` | Branch-specific price, quantity, reorder level and status |
 | `stock_transfers` | Transfer header, route, status and send/receipt audit data |
 | `stock_transfer_items` | Products and quantities included in a transfer |
+| `suppliers` | Supplier identity and contact information |
+| `purchase_orders` | Branch order header, supplier and receiving status |
+| `purchase_order_items` | Ordered, received and outstanding product quantities |
+| `inventory_lots` | Optional lot, expiry, cost and remaining quantities |
+| `stock_transfer_item_lots` | Expiry lots carried between branches during transfers |
 
 ## Relationships
 
@@ -38,6 +43,8 @@ erDiagram
 - Sales and stock movements always identify the responsible branch.
 - A product can have different selling prices and inventory balances by branch.
 - Sending a transfer deducts source stock; destination stock increases only through `receive_stock_transfer`.
+- Purchase receipts increase stock only by the quantity received and support partial delivery.
+- Tracked lots are reduced earliest-expiry-first during checkout.
 
 ## Security
 
