@@ -38,11 +38,14 @@
 - Offline cash-sale queue, cached catalogue and automatic synchronization
 - Duplicate-safe transaction IDs, safety-stock controls and conflict reporting
 - Installable PWA application shell
+- Administrator System Health dashboard and operational exception checks
+- Automated production-build, rendered-smoke, offline-rule and database-contract tests
+- GitHub Actions quality gate
 
 ## Recommended next milestones
 
-1. Automated tests
-2. Production monitoring and backup drills
+1. Production monitoring and backup drills
+2. Tax and receipt compliance review
 
 ## Production-readiness items
 

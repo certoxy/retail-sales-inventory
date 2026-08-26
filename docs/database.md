@@ -32,6 +32,7 @@
 | `expenses` | Branch cost, payment, approval and linked cash-movement audit |
 | `inventory_disposals` | Branch write-off request, reason, status and approval audit |
 | `inventory_disposal_items` | Product, lot, quantity and estimated cost for each write-off |
+| `system_settings` | Application and database migration release metadata |
 
 ## Relationships
 
@@ -76,6 +77,7 @@ erDiagram
 - Approved disposals deduct branch inventory and the selected lot, or consume available lots using FEFO.
 - Offline transactions carry a device-generated UUID; a unique database index prevents duplicate synchronization.
 - `sync_offline_sale` validates branch access, cashier shift timing and current stock before atomically posting a queued sale.
+- `get_system_health` exposes permission-aware operational exception counts only to administrators.
 
 ## Security
 

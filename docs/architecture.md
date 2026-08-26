@@ -128,6 +128,14 @@ Each product has a global catalogue record and one `branch_products` record per 
 5. Reconnection triggers `sync_offline_sale`, which revalidates shift timing and current server inventory inside one transaction.
 6. A unique offline transaction ID prevents duplicate posting; stock conflicts remain in the queue for review and retry.
 
+## Quality and health monitoring
+
+1. The System Health RPC calculates live operational exceptions without granting broad table access to the browser.
+2. Administrators can scope checks to one branch or review the full business.
+3. Device-local failed offline transactions are combined with server-side health results in the interface.
+4. Node tests cover offline safety rules, rendered application output and critical database migration contracts.
+5. GitHub Actions runs the complete build and test gate for every main-branch update and pull request.
+
 ## Source layout
 
 - `app/`: interface and styling

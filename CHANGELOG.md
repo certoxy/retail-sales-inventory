@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.9.0] - 2026-08-26
+
+### Added
+
+- Administrator-only System Health workspace with all-branch and branch-specific scopes
+- Negative inventory, stuck transfer, aged purchase-order and pending-approval checks
+- Open shift, active stocktake, recent sales, active staff and last offline-sync visibility
+- Application and migration version tracking
+- Automated offline safety-rule and database-contract tests
+- GitHub Actions quality gate running the production build and test suite on pushes and pull requests
+
 ## [1.8.0] - 2026-08-26
 
 ### Added
