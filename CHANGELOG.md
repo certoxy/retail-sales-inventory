@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.1] - 2026-08-26
+
+### Added
+
+- Red critically-low product count badge on the Products & Inventory navigation tab
+
 ## [1.5.0] - 2026-08-26
 
 ### Added
