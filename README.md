@@ -100,6 +100,7 @@ Run the SQL files in Supabase SQL Editor in numeric order:
 16. `supabase/migrations/016_offline_sales.sql`
 17. `supabase/migrations/017_system_health.sql`
 18. `supabase/migrations/018_audit_backup_recovery.sql`
+19. `supabase/migrations/019_multitenant_foundation.sql`
 
 Then create at least one user under **Supabase → Authentication → Users**.
 
@@ -124,3 +125,5 @@ All application tables use Row-Level Security. Database access is limited to aut
 ## Status
 
 Version 1.10 includes database audit events, evidence-based backup readiness and recovery controls. Provider backups and restore drills still require an administrator to configure and verify them outside the production database.
+
+Version 2.0 introduces the multi-tenant foundation. Existing data is assigned to a default organisation, branches and shared catalogues are organisation-scoped, staff access is backed by organisation memberships, and database guards prevent records from crossing organisation boundaries. New accounts without a membership can create an isolated organisation and initial main branch.
