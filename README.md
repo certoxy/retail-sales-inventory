@@ -114,4 +114,4 @@ All application tables use Row-Level Security. Database access is limited to aut
 
 ## Status
 
-This is an early working MVP. Offline support and automated tests remain before production retail use.
+Version 1.7 includes the complete branch disposal and write-off workflow. Offline support and automated tests remain before production retail use.
