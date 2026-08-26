@@ -45,6 +45,7 @@ erDiagram
 - Sending a transfer deducts source stock; destination stock increases only through `receive_stock_transfer`.
 - Purchase receipts increase stock only by the quantity received and support partial delivery.
 - Tracked lots are reduced earliest-expiry-first during checkout.
+- `get_sales_dashboard` returns permission-aware sales and operating aggregates without exposing unrestricted transaction data.
 
 ## Security
 

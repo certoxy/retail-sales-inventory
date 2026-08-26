@@ -22,13 +22,16 @@
 - Suppliers and purchase orders
 - Partial delivery receiving
 - Optional expiry and lot inventory
+- Sales and operations dashboard
+- Branch, payment and product performance reporting
+- Permission-aware CSV sales export
 
 ## Recommended next milestones
 
-1. Sales dashboard and reporting
-2. Receipt printing
-3. Returns and refunds
-4. Cash register shifts and reconciliation
+1. Receipt printing
+2. Returns and refunds
+3. Cash register shifts and reconciliation
+4. Stocktake and physical inventory counting
 5. Offline-first transaction queue and synchronization
 6. Automated tests
 

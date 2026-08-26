@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.0] - 2026-08-26
+
+### Added
+
+- Date-range and branch-filtered sales dashboard
+- Net sales, transaction count, average sale and estimated gross profit KPIs
+- Daily sales trend and payment-method mix
+- Top-selling products and branch-performance tables
+- Low-stock, expiry, open-order and in-transit operational indicators
+- CSV export of filtered sales transactions
+- Cashier-scoped reporting with administrator-only profit visibility
+
 ## [0.9.0] - 2026-08-26
 
 ### Added

@@ -50,6 +50,14 @@ Each product has a global catalogue record and one `branch_products` record per 
 5. Checkout reduces tracked lots using first-expiry-first-out (FEFO).
 6. Stock transfers preserve tracked lot and expiry details between branches.
 
+## Reporting flow
+
+1. The user selects a date range and permitted branch scope.
+2. `get_sales_dashboard` aggregates sales, products, payments and operating alerts in PostgreSQL.
+3. Administrators may report across all branches and view estimated gross profit.
+4. Cashiers are restricted to their own sales at an assigned branch.
+5. CSV export uses the same Row-Level Security restrictions as the dashboard.
+
 ## Source layout
 
 - `app/`: interface and styling
