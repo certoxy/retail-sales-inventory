@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0] - 2026-08-26
+
+### Added
+
+- Automatic receipt preview after completed checkout
+- 58 mm and 80 mm thermal-printer layouts
+- Branch, cashier, transaction, payment and VAT receipt details
+- Sales History workspace with the latest 100 permitted transactions
+- Permission-aware receipt retrieval and reprinting
+
 ## [1.0.0] - 2026-08-26
 
 ### Added

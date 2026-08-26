@@ -25,13 +25,14 @@
 - Sales and operations dashboard
 - Branch, payment and product performance reporting
 - Permission-aware CSV sales export
+- Thermal receipt printing and secure receipt reprinting
 
 ## Recommended next milestones
 
-1. Receipt printing
-2. Returns and refunds
-3. Cash register shifts and reconciliation
-4. Stocktake and physical inventory counting
+1. Returns and refunds
+2. Cash register shifts and reconciliation
+3. Stocktake and physical inventory counting
+4. Automated reorder suggestions
 5. Offline-first transaction queue and synchronization
 6. Automated tests
 

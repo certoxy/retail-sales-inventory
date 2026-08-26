@@ -58,6 +58,13 @@ Each product has a global catalogue record and one `branch_products` record per 
 4. Cashiers are restricted to their own sales at an assigned branch.
 5. CSV export uses the same Row-Level Security restrictions as the dashboard.
 
+## Receipt flow
+
+1. Checkout returns the newly created sale identifier.
+2. `get_sale_receipt` verifies branch and cashier permissions.
+3. The application renders the transaction in 58 mm or 80 mm thermal format.
+4. Sales History uses the same sales policies for secure receipt reprinting.
+
 ## Source layout
 
 - `app/`: interface and styling

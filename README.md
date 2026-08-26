@@ -23,6 +23,8 @@ A browser-based retail point-of-sale and inventory application built with React/
 - Sales and operations dashboard with branch and date filters
 - Payment mix, top-product and branch-performance reporting
 - Administrator-only estimated gross profit and CSV sales export
+- Automatic checkout receipts and sales-history reprinting
+- Thermal-printer layouts for 58 mm and 80 mm paper
 - Protection against negative inventory
 - Low-stock indicators and inventory summaries
 - Cost, markup and potential-margin visibility for administrators
@@ -71,6 +73,7 @@ Run the SQL files in Supabase SQL Editor in numeric order:
 6. `supabase/migrations/006_stock_transfers.sql`
 7. `supabase/migrations/007_suppliers_purchase_orders_expiry.sql`
 8. `supabase/migrations/008_sales_dashboard.sql`
+9. `supabase/migrations/009_receipt_printing.sql`
 
 Then create at least one user under **Supabase → Authentication → Users**.
 

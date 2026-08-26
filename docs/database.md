@@ -46,6 +46,7 @@ erDiagram
 - Purchase receipts increase stock only by the quantity received and support partial delivery.
 - Tracked lots are reduced earliest-expiry-first during checkout.
 - `get_sales_dashboard` returns permission-aware sales and operating aggregates without exposing unrestricted transaction data.
+- `get_sale_receipt` returns a complete receipt only to administrators or the cashier who completed the sale.
 
 ## Security
 
