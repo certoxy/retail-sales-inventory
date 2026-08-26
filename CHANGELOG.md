@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0] - 2026-08-26
+
+### Added
+
+- Receipt-number lookup for returns
+- Partial item and quantity returns with over-return prevention
+- Refund and exchange outcomes
+- Sellable, damaged and expired dispositions
+- Administrator approval and rejection workflow
+- Automatic restocking only for approved sellable returns
+- Permanent return audit history and printable return receipts
+
 ## [1.1.0] - 2026-08-26
 
 ### Added

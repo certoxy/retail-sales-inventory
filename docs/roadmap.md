@@ -26,13 +26,14 @@
 - Branch, payment and product performance reporting
 - Permission-aware CSV sales export
 - Thermal receipt printing and secure receipt reprinting
+- Partial returns, refund/exchange approval and return receipts
 
 ## Recommended next milestones
 
-1. Returns and refunds
-2. Cash register shifts and reconciliation
-3. Stocktake and physical inventory counting
-4. Automated reorder suggestions
+1. Cash register shifts and reconciliation
+2. Stocktake and physical inventory counting
+3. Automated reorder suggestions
+4. Expense tracking
 5. Offline-first transaction queue and synchronization
 6. Automated tests
 

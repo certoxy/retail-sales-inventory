@@ -21,6 +21,8 @@
 | `purchase_order_items` | Ordered, received and outstanding product quantities |
 | `inventory_lots` | Optional lot, expiry, cost and remaining quantities |
 | `stock_transfer_item_lots` | Expiry lots carried between branches during transfers |
+| `returns` | Return request, outcome, approval, refund and audit header |
+| `return_items` | Original sale items, returned quantities and disposition |
 
 ## Relationships
 
@@ -47,6 +49,8 @@ erDiagram
 - Tracked lots are reduced earliest-expiry-first during checkout.
 - `get_sales_dashboard` returns permission-aware sales and operating aggregates without exposing unrestricted transaction data.
 - `get_sale_receipt` returns a complete receipt only to administrators or the cashier who completed the sale.
+- Return functions prevent cumulative approved or pending quantities from exceeding the original sale.
+- Only approved `restock` items increase sellable branch inventory.
 
 ## Security
 

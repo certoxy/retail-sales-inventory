@@ -25,6 +25,8 @@ A browser-based retail point-of-sale and inventory application built with React/
 - Administrator-only estimated gross profit and CSV sales export
 - Automatic checkout receipts and sales-history reprinting
 - Thermal-printer layouts for 58 mm and 80 mm paper
+- Partial returns, refund/exchange requests and administrator approval
+- Sellable, damaged and expired return dispositions with audit receipts
 - Protection against negative inventory
 - Low-stock indicators and inventory summaries
 - Cost, markup and potential-margin visibility for administrators
@@ -74,6 +76,7 @@ Run the SQL files in Supabase SQL Editor in numeric order:
 7. `supabase/migrations/007_suppliers_purchase_orders_expiry.sql`
 8. `supabase/migrations/008_sales_dashboard.sql`
 9. `supabase/migrations/009_receipt_printing.sql`
+10. `supabase/migrations/010_returns_refunds.sql`
 
 Then create at least one user under **Supabase → Authentication → Users**.
 

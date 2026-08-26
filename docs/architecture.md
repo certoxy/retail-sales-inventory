@@ -65,6 +65,15 @@ Each product has a global catalogue record and one `branch_products` record per 
 3. The application renders the transaction in 58 mm or 80 mm thermal format.
 4. Sales History uses the same sales policies for secure receipt reprinting.
 
+## Return and refund flow
+
+1. Staff locate the original sale by receipt number and select return quantities.
+2. `create_return_request` validates the original items and prior returns.
+3. The request remains pending without changing inventory or the original sale.
+4. An administrator approves or rejects the request.
+5. Approved sellable returns increase branch inventory; damaged and expired items remain unavailable.
+6. The return record and printable receipt preserve the complete decision trail.
+
 ## Source layout
 
 - `app/`: interface and styling
