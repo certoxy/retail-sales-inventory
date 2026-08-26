@@ -39,6 +39,8 @@ A browser-based retail point-of-sale and inventory application built with React/
 - Offline cash-sale queue with cached branch catalogue and automatic synchronization
 - Installable PWA shell, connection status and duplicate-safe offline transaction IDs
 - Administrator System Health dashboard with operational exceptions and release status
+- Administrator audit log with branch, actor, date and record filters plus CSV export
+- Evidence-based backup readiness checklist, isolated recovery-drill history and continuity snapshots
 - GitHub quality gate for production builds, rendered smoke tests, business rules and database contracts
 - Protection against negative inventory
 - Low-stock indicators and inventory summaries
@@ -97,6 +99,7 @@ Run the SQL files in Supabase SQL Editor in numeric order:
 15. `supabase/migrations/015_inventory_disposals.sql`
 16. `supabase/migrations/016_offline_sales.sql`
 17. `supabase/migrations/017_system_health.sql`
+18. `supabase/migrations/018_audit_backup_recovery.sql`
 
 Then create at least one user under **Supabase → Authentication → Users**.
 
@@ -120,4 +123,4 @@ All application tables use Row-Level Security. Database access is limited to aut
 
 ## Status
 
-Version 1.8 includes guarded offline cash sales and automatic synchronization. Automated tests and broader production hardening remain before production retail use.
+Version 1.10 includes database audit events, evidence-based backup readiness and recovery controls. Provider backups and restore drills still require an administrator to configure and verify them outside the production database.

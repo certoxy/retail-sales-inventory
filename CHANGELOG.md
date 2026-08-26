@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.10.0] - 2026-08-26
+
+### Added
+
+- Database-triggered audit events for sales, inventory, purchasing, returns, shifts, expenses, disposals, stocktakes and access changes
+- Administrator audit filters, searchable activity history and CSV export
+- Backup-evidence controls with verification age, retention and recovery-contact checks
+- Isolated recovery-drill records with outcome, duration, restored-through time and evidence
+- Branch continuity snapshot export for current inventory and 30 days of sales and stock movements
+- Truthful readiness status that never claims provider backup verification automatically
+
 ## [1.9.0] - 2026-08-26
 
 ### Added

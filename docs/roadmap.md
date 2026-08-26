@@ -40,6 +40,7 @@
 - Installable PWA application shell
 - Administrator System Health dashboard and operational exception checks
 - Automated production-build, rendered-smoke, offline-rule and database-contract tests
+- Administrator audit log, backup-readiness evidence and isolated recovery-drill controls
 - GitHub Actions quality gate
 
 ## Recommended next milestones

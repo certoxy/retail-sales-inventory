@@ -134,6 +134,14 @@ Each product has a global catalogue record and one `branch_products` record per 
 2. Administrators can scope checks to one branch or review the full business.
 3. Device-local failed offline transactions are combined with server-side health results in the interface.
 4. Node tests cover offline safety rules, rendered application output and critical database migration contracts.
+
+## Audit and recovery controls
+
+1. Database triggers capture significant inserts, updates and deletes after migration 018, so the browser cannot forge or edit audit history.
+2. Row-Level Security restricts audit, backup and recovery records to administrators; controlled RPC functions perform writes.
+3. Backup readiness is evidence-based. RetailFlow does not query or claim to verify the Supabase provider backup service.
+4. Recovery drills must be recorded against sandbox, staging or test environments, never by restoring over production.
+5. A downloadable branch continuity snapshot supports operational reference but is explicitly not a full database backup.
 5. GitHub Actions runs the complete build and test gate for every main-branch update and pull request.
 
 ## Source layout
