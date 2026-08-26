@@ -32,6 +32,8 @@ A browser-based retail point-of-sale and inventory application built with React/
 - Branch stocktakes with physical counts, variance review and controlled posting
 - Automated reorder suggestions, preferred suppliers and supplier-grouped draft orders
 - Critical-stock pop-up alerts for branch administrators
+- Branch expense tracking with approvals, CSV export and cashier-shift cash integration
+- Dashboard operating-result estimates after approved expenses
 - Protection against negative inventory
 - Low-stock indicators and inventory summaries
 - Cost, markup and potential-margin visibility for administrators
@@ -85,6 +87,7 @@ Run the SQL files in Supabase SQL Editor in numeric order:
 11. `supabase/migrations/011_cashier_shifts.sql`
 12. `supabase/migrations/012_stocktake_physical_count.sql`
 13. `supabase/migrations/013_reorder_suggestions.sql`
+14. `supabase/migrations/014_branch_expenses.sql`
 
 Then create at least one user under **Supabase → Authentication → Users**.
 
@@ -108,4 +111,4 @@ All application tables use Row-Level Security. Database access is limited to aut
 
 ## Status
 
-This is an early working MVP. Expense tracking, offline support and automated tests remain before production retail use.
+This is an early working MVP. Offline support and automated tests remain before production retail use.

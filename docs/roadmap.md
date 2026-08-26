@@ -31,10 +31,12 @@
 - Stocktake sessions, physical inventory counting and variance posting
 - Automated reorder suggestions, preferred suppliers and draft purchase orders
 - Critical-stock pop-up notifications
+- Branch expense tracking, approvals and cashier-shift integration
+- Expense breakdowns, CSV export and dashboard operating-result estimates
 
 ## Recommended next milestones
 
-1. Expense tracking
+1. Damaged and expired stock disposal
 2. Offline-first transaction queue and synchronization
 3. Automated tests
 

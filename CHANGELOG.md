@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.6.0] - 2026-08-26
+
+### Added
+
+- Branch expense categories and expense-entry workflow
+- Cash, card, GCash and bank payment methods
+- Payee, receipt/reference, date and notes fields
+- Cashier submissions with administrator approval and rejection
+- Automatic active-shift cash-out movements for cash expenses
+- Safe cash reversal when an open-shift expense is rejected
+- Expense history, category/payment breakdowns and CSV export
+- Dashboard approved expenses, pending expenses and estimated operating result
+
 ## [1.5.1] - 2026-08-26
 
 ### Added

@@ -101,6 +101,15 @@ Each product has a global catalogue record and one `branch_products` record per 
 5. `create_reorder_draft_orders` groups selected products into one draft purchase order per supplier.
 6. Drafts are reviewed and confirmed in Purchasing before receiving is permitted.
 
+## Expense flow
+
+1. Staff record a branch expense with category, payment method, date, payee and supporting reference.
+2. Cash expenses require the submitter's open cashier shift and create a linked cash-out movement.
+3. Administrator entries are approved immediately; cashier entries remain pending for review.
+4. Rejected cash expenses create a cash-in reversal while the original shift is still open.
+5. Permission-aware summaries group approved costs by category and payment method.
+6. The dashboard estimates operating result as gross profit minus approved expenses.
+
 ## Source layout
 
 - `app/`: interface and styling

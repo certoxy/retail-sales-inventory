@@ -3,11 +3,9 @@
 
 begin;
 
--- Convert the original enum to an extensible checked status so draft orders can be added safely.
-alter table public.purchase_orders alter column status drop default;
-alter table public.purchase_orders alter column status type text using status::text;
-drop type public.purchase_order_status;
+-- This project already stores purchase-order status as text.
 alter table public.purchase_orders alter column status set default 'ordered';
+alter table public.purchase_orders drop constraint if exists purchase_orders_status_check;
 alter table public.purchase_orders add constraint purchase_orders_status_check
   check(status in ('draft','ordered','partially_received','received','cancelled'));
 

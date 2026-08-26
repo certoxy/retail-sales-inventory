@@ -28,6 +28,8 @@
 | `stocktakes` | Branch count-session status, ownership and posting audit |
 | `stocktake_items` | Expected, physically counted and variance quantity per product |
 | `product_suppliers` | Preferred supplier, supplier cost and lead time per product |
+| `expense_categories` | Standard operating-cost classifications |
+| `expenses` | Branch cost, payment, approval and linked cash-movement audit |
 
 ## Relationships
 
@@ -65,6 +67,9 @@ erDiagram
 - Reorder suggestions combine 30-day average demand with the selected coverage period and subtract usable stock, open orders and incoming transfers.
 - Quantities expiring inside the coverage window are excluded from usable stock when calculating replenishment.
 - Generated orders start as drafts and must be confirmed before deliveries can be received.
+- Cash expenses require an open cashier shift and immediately create a linked cash-out movement.
+- Administrator-entered expenses are approved immediately; cashier expenses require review.
+- Rejected cash expenses are reversed only while the linked shift remains open.
 
 ## Security
 
