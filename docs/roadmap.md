@@ -29,13 +29,14 @@
 - Partial returns, refund/exchange approval and return receipts
 - Cash register shifts, drawer movements and closing reconciliation
 - Stocktake sessions, physical inventory counting and variance posting
+- Automated reorder suggestions, preferred suppliers and draft purchase orders
+- Critical-stock pop-up notifications
 
 ## Recommended next milestones
 
-1. Automated reorder suggestions
-2. Expense tracking
-3. Offline-first transaction queue and synchronization
-4. Automated tests
+1. Expense tracking
+2. Offline-first transaction queue and synchronization
+3. Automated tests
 
 ## Production-readiness items
 

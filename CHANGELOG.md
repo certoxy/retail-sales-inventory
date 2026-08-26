@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.0] - 2026-08-26
+
+### Added
+
+- Automated branch reorder suggestions using 30-day sales velocity
+- Adjustable 7, 14, 21 or 30-day stock coverage
+- Open purchase order, incoming transfer and expiring-stock deductions
+- Preferred product-to-supplier assignments and lead-time records
+- Editable suggested quantities and supplier-grouped draft purchase orders
+- Draft purchase-order confirmation before receiving
+- Daily pop-up alerts for critically low and out-of-stock products
+
 ## [1.4.0] - 2026-08-26
 
 ### Added

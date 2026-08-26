@@ -92,6 +92,15 @@ Each product has a global catalogue record and one `branch_products` record per 
 5. Posting atomically replaces branch balances, records variance movements and reconciles available inventory lots.
 6. Posted and cancelled sessions remain in the branch audit history.
 
+## Reorder planning flow
+
+1. `get_reorder_suggestions` calculates average daily product sales from the previous 30 days.
+2. The selected coverage window determines target stock, with twice the product reorder level as the minimum target.
+3. Usable stock excludes near-expiry units; open orders and incoming transfers reduce the suggested quantity.
+4. An administrator selects quantities and assigns preferred suppliers.
+5. `create_reorder_draft_orders` groups selected products into one draft purchase order per supplier.
+6. Drafts are reviewed and confirmed in Purchasing before receiving is permitted.
+
 ## Source layout
 
 - `app/`: interface and styling

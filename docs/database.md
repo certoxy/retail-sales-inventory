@@ -27,6 +27,7 @@
 | `cash_movements` | Reasoned cash additions and removals during a shift |
 | `stocktakes` | Branch count-session status, ownership and posting audit |
 | `stocktake_items` | Expected, physically counted and variance quantity per product |
+| `product_suppliers` | Preferred supplier, supplier cost and lead time per product |
 
 ## Relationships
 
@@ -61,6 +62,9 @@ erDiagram
 - Starting a stocktake snapshots every active branch product and permits only one active session per branch.
 - Posting replaces branch balances with approved physical counts and records each non-zero variance as a `stocktake` movement.
 - Positive variances create an untracked inventory lot; negative variances reduce available lots using FEFO.
+- Reorder suggestions combine 30-day average demand with the selected coverage period and subtract usable stock, open orders and incoming transfers.
+- Quantities expiring inside the coverage window are excluded from usable stock when calculating replenishment.
+- Generated orders start as drafts and must be confirmed before deliveries can be received.
 
 ## Security
 
